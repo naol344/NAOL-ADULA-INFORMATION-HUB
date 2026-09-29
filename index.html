@@ -1,0 +1,2941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#000000">
+
+<meta name="description"
+content="NAOL ADULA INFORMATION HUB - Student Books, Teacher Resources, Health, Knowledge and useful resources.">
+
+<title>WELCOME TO NAOL ADULA INFORMATION HUB</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+:root{
+  --blue:#1565c0;
+  --dark:#102a43;
+  --light:#f3f6fb;
+  --green:#16834a;
+  --red:#c62828;
+  --orange:#ef6c00;
+  --purple:#7b1fa2;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--light);
+  color:#222;
+  line-height:1.6;
+}
+
+header{
+  background:linear-gradient(135deg,#0d47a1,#1976d2);
+  color:white;
+  padding:20px 12px;
+  text-align:center;
+}
+
+header h1{
+  font-size:25px;
+  letter-spacing:1px;
+}
+
+header p{
+  font-size:14px;
+  margin-top:6px;
+}
+
+.banner{
+  background:#000;
+  color:white;
+  overflow:hidden;
+  white-space:nowrap;
+  height:58px;
+  display:flex;
+  align-items:center;
+}
+
+.banner span{
+  display:inline-block;
+  font-size:25px;
+  font-weight:900;
+  letter-spacing:2px;
+  padding-left:100%;
+  animation:
+    moveBanner 11s linear infinite,
+    glow 4s linear infinite;
+}
+
+@keyframes moveBanner{
+  from{
+    transform:translateX(0);
+  }
+  to{
+    transform:translateX(-100%);
+  }
+}
+
+@keyframes glow{
+  0%{
+    color:#00e5ff;
+    text-shadow:0 0 8px #00e5ff;
+  }
+
+  25%{
+    color:#ff00e6;
+    text-shadow:0 0 12px #ff00e6;
+  }
+
+  50%{
+    color:#ffee00;
+    text-shadow:0 0 12px #ffee00;
+  }
+
+  75%{
+    color:#00ff66;
+    text-shadow:0 0 12px #00ff66;
+  }
+
+  100%{
+    color:#00e5ff;
+    text-shadow:0 0 8px #00e5ff;
+  }
+}
+
+nav{
+  background:#0b2239;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:6px;
+  padding:10px;
+}
+
+nav button{
+  border:0;
+  border-radius:6px;
+  padding:10px 13px;
+  background:#1976d2;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+nav button:hover{
+  background:#0d47a1;
+}
+
+.container{
+  max-width:1100px;
+  margin:20px auto;
+  padding:0 14px;
+}
+
+.section{
+  background:white;
+  padding:20px;
+  border-radius:12px;
+  margin-bottom:20px;
+  box-shadow:0 3px 12px #00000010;
+}
+
+.section h2{
+  color:#0d47a1;
+  margin-bottom:12px;
+  border-bottom:2px solid #e6edf5;
+  padding-bottom:8px;
+}
+
+.intro{
+  background:linear-gradient(135deg,#e3f2fd,#f3e5f5);
+  border-radius:12px;
+  padding:25px;
+  text-align:center;
+}
+
+.intro h2{
+  color:#0d47a1;
+  font-size:25px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(145px,1fr));
+  gap:12px;
+}
+
+.card{
+  background:#f5f8fc;
+  border:1px solid #dbe5f0;
+  border-radius:10px;
+  padding:16px;
+  text-align:center;
+}
+
+.card h3{
+  color:#1565c0;
+  margin-bottom:8px;
+}
+
+button{
+  cursor:pointer;
+}
+
+.action{
+  border:0;
+  background:#1565c0;
+  color:white;
+  padding:10px 14px;
+  border-radius:6px;
+  margin:4px 2px;
+  font-weight:bold;
+}
+
+.action:hover{
+  background:#0d47a1;
+}
+
+.green{
+  background:#16834a;
+}
+
+.green:hover{
+  background:#0e6538;
+}
+
+.red{
+  background:#c62828;
+}
+
+.red:hover{
+  background:#8e1d1d;
+}
+
+.orange{
+  background:#ef6c00;
+}
+
+.orange:hover{
+  background:#c45100;
+}
+
+.purple{
+  background:#7b1fa2;
+}
+
+.purple:hover{
+  background:#5e1680;
+}
+
+.gray{
+  background:#546e7a;
+}
+
+.gray:hover{
+  background:#37474f;
+}
+
+input,
+select,
+textarea{
+  width:100%;
+  padding:11px;
+  border:1px solid #cbd5e1;
+  border-radius:6px;
+  margin:6px 0 12px;
+  font-size:15px;
+}
+
+label{
+  font-weight:bold;
+}
+
+.hidden{
+  display:none !important;
+}
+
+.password-box{
+  position:relative;
+}
+
+.password-box input{
+  padding-right:85px;
+}
+
+.show-password{
+  position:absolute;
+  right:5px;
+  top:11px;
+  border:0;
+  background:#546e7a;
+  color:white;
+  border-radius:5px;
+  padding:7px 9px;
+  font-size:12px;
+  font-weight:bold;
+}
+
+.resource-item{
+  border:1px solid #ddd;
+  border-radius:8px;
+  padding:12px;
+  margin:10px 0;
+  background:#fff;
+}
+
+.resource-item strong{
+  display:block;
+  margin-bottom:5px;
+  font-size:17px;
+}
+
+.resource-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:5px;
+}
+
+.notice{
+  background:#fff3cd;
+  padding:12px;
+  border-radius:8px;
+  margin:10px 0;
+  color:#664d03;
+}
+
+.success{
+  background:#d1e7dd;
+  color:#0f5132;
+  padding:12px;
+  border-radius:8px;
+  margin:10px 0;
+}
+
+.message{
+  margin:10px 0;
+  font-weight:bold;
+}
+
+.recovery-box{
+  margin-top:18px;
+  padding:18px;
+  border-radius:10px;
+  background:#f3e5f5;
+  border:1px solid #ce93d8;
+}
+
+.recovery-box h3{
+  color:#7b1fa2;
+  margin-bottom:10px;
+}
+
+hr{
+  border:0;
+  border-top:1px solid #ddd;
+}
+
+footer{
+  background:#102a43;
+  color:white;
+  text-align:center;
+  padding:22px 12px;
+  margin-top:30px;
+}
+
+#pdfViewer{
+  width:100%;
+  height:75vh;
+  min-height:500px;
+  border:1px solid #ddd;
+  border-radius:8px;
+  background:white;
+}
+
+.pdf-fallback{
+  padding:20px;
+  text-align:center;
+  background:#f5f8fc;
+  border-radius:8px;
+  margin-top:10px;
+}
+
+.loading{
+  text-align:center;
+  padding:20px;
+}
+
+@media(max-width:600px){
+
+  header h1{
+    font-size:21px;
+  }
+
+  .banner{
+    height:52px;
+  }
+
+  .banner span{
+    font-size:20px;
+  }
+
+  .section{
+    padding:15px;
+  }
+
+  nav{
+    gap:5px;
+  }
+
+  nav button{
+    font-size:12px;
+    padding:9px;
+  }
+
+  .intro h2{
+    font-size:21px;
+  }
+
+  #pdfViewer{
+    height:65vh;
+    min-height:400px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>NAOL ADULA INFORMATION HUB</h1>
+  <p>Books • Education • Health • Knowledge • Useful Resources</p>
+</header>
+
+<div class="banner">
+  <span>WELCOME TO NAOL ADULA INFORMATION HUB</span>
+</div>
+
+<nav>
+  <button type="button" onclick="showSection('home')">Home</button>
+  <button type="button" onclick="showSection('students')">Student Books</button>
+  <button type="button" onclick="showSection('teachers')">Teacher Resources</button>
+  <button type="button" onclick="showSection('health')">Health</button>
+  <button type="button" onclick="showSection('knowledge')">Knowledge</button>
+  <button type="button" onclick="showSection('advice')">Advice</button>
+  <button type="button" onclick="showSection('admin')">Admin</button>
+</nav>
+
+<main class="container">
+
+<!-- HOME -->
+
+<section id="home" class="section">
+
+  <div class="intro">
+
+    <h2>Welcome to NAOL ADULA INFORMATION HUB</h2>
+
+    <p>
+      Your online resource center for education,
+      books, health information, and useful knowledge.
+    </p>
+
+    <br>
+
+    <button
+      type="button"
+      class="action"
+      onclick="showSection('students')">
+      Explore Student Books
+    </button>
+
+    <button
+      type="button"
+      class="action green"
+      onclick="showSection('teachers')">
+      Teacher Resources
+    </button>
+
+  </div>
+
+  <div class="section" style="margin-top:20px">
+
+    <h2>About Us</h2>
+
+    <p>
+      NAOL ADULA INFORMATION HUB provides educational
+      materials and useful resources for students,
+      teachers, and the community.
+    </p>
+
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Student Books</h3>
+      <p>Find books for Grades 1–12.</p>
+
+      <button
+        type="button"
+        class="action"
+        onclick="showSection('students')">
+        Explore
+      </button>
+    </div>
+
+    <div class="card">
+      <h3>Teacher Resources</h3>
+      <p>Teaching and learning materials.</p>
+
+      <button
+        type="button"
+        class="action"
+        onclick="showSection('teachers')">
+        Explore
+      </button>
+    </div>
+
+    <div class="card">
+      <h3>Health Resources</h3>
+      <p>General health information.</p>
+
+      <button
+        type="button"
+        class="action"
+        onclick="showSection('health')">
+        Explore
+      </button>
+    </div>
+
+    <div class="card">
+      <h3>Knowledge</h3>
+      <p>Useful educational information.</p>
+
+      <button
+        type="button"
+        class="action"
+        onclick="showSection('knowledge')">
+        Explore
+      </button>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- STUDENT BOOKS -->
+
+<section id="students" class="section hidden">
+
+  <h2>Student Books — Grades 1–12</h2>
+
+  <p>Select a grade to view available books.</p>
+
+  <br>
+
+  <div class="grid" id="gradeGrid"></div>
+
+  <div id="gradeBooks" class="section hidden">
+
+    <h2 id="gradeTitle">Books</h2>
+
+    <div id="gradeBookList"></div>
+
+  </div>
+
+</section>
+
+
+<!-- TEACHER -->
+
+<section id="teachers" class="section hidden">
+
+  <h2>Teacher Resources</h2>
+
+  <p>
+    Teaching materials, lesson plans,
+    and professional development resources.
+  </p>
+
+  <div id="teacherList"></div>
+
+</section>
+
+
+<!-- HEALTH -->
+
+<section id="health" class="section hidden">
+
+  <h2>Health Resources</h2>
+
+  <p>
+    General health education materials and resources.
+  </p>
+
+  <div id="healthList"></div>
+
+</section>
+
+
+<!-- KNOWLEDGE -->
+
+<section id="knowledge" class="section hidden">
+
+  <h2>Knowledge and Learning</h2>
+
+  <p>
+    Educational knowledge and useful learning materials.
+  </p>
+
+  <div id="knowledgeList"></div>
+
+</section>
+
+
+<!-- ADVICE -->
+
+<section id="advice" class="section hidden">
+
+  <h2>Advice and Guidance</h2>
+
+  <p>
+    Useful guidance for students,
+    teachers, and the community.
+  </p>
+
+  <div id="adviceList"></div>
+
+</section>
+
+
+<!-- ADMIN -->
+
+<section id="admin" class="section hidden">
+
+  <h2>Administrator Login</h2>
+
+  <!-- LOGIN -->
+
+  <div id="adminLogin">
+
+    <p>
+      Sign in to upload and manage PDF resources.
+    </p>
+
+    <label for="adminPassword">
+      Admin Password
+    </label>
+
+    <div class="password-box">
+
+      <input
+        id="adminPassword"
+        type="password"
+        placeholder="Enter admin password"
+        autocomplete="current-password">
+
+      <button
+        type="button"
+        class="show-password"
+        onclick="togglePassword('adminPassword','passwordToggle')"
+        id="passwordToggle">
+        Show
+      </button>
+
+    </div>
+
+    <button
+      type="button"
+      class="action"
+      onclick="adminLogin()">
+      Login
+    </button>
+
+    <button
+      type="button"
+      class="action purple"
+      onclick="showRecovery()">
+      Forgot Password?
+    </button>
+
+    <p id="loginMessage" class="message"></p>
+
+
+    <!-- PASSWORD RECOVERY -->
+
+    <div
+      id="recoveryBox"
+      class="recovery-box hidden">
+
+      <h3>Password Recovery</h3>
+
+      <p>
+        Answer your security question to reset
+        the administrator password.
+      </p>
+
+      <br>
+
+      <label for="recoveryAnswer">
+        What is your favorite leader?
+      </label>
+
+      <input
+        id="recoveryAnswer"
+        type="text"
+        placeholder="Enter your answer"
+        autocomplete="off">
+
+      <label for="newPassword">
+        New Password
+      </label>
+
+      <div class="password-box">
+
+        <input
+          id="newPassword"
+          type="password"
+          placeholder="Enter new password">
+
+        <button
+          type="button"
+          class="show-password"
+          onclick="togglePassword('newPassword','newPasswordToggle')"
+          id="newPasswordToggle">
+          Show
+        </button>
+
+      </div>
+
+      <label for="confirmPassword">
+        Confirm New Password
+      </label>
+
+      <div class="password-box">
+
+        <input
+          id="confirmPassword"
+          type="password"
+          placeholder="Confirm new password">
+
+        <button
+          type="button"
+          class="show-password"
+          onclick="togglePassword('confirmPassword','confirmPasswordToggle')"
+          id="confirmPasswordToggle">
+          Show
+        </button>
+
+      </div>
+
+      <button
+        type="button"
+        class="action purple"
+        onclick="recoverPassword()">
+        Reset Password
+      </button>
+
+      <button
+        type="button"
+        class="action gray"
+        onclick="hideRecovery()">
+        Cancel
+      </button>
+
+      <p
+        id="recoveryMessage"
+        class="message">
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- ADMIN PANEL -->
+
+  <div id="adminPanel" class="hidden">
+
+    <h2>Admin Dashboard</h2>
+
+    <div class="notice">
+      You are logged in as Administrator.
+      Only the Administrator can upload or delete resources.
+    </div>
+
+    <h2>Upload Resource</h2>
+
+    <div class="notice">
+      Select Student Books only when the PDF belongs
+      to a specific grade. Other categories do not require a grade.
+    </div>
+
+    <label for="resourceTitle">
+      Resource Title
+    </label>
+
+    <input
+      id="resourceTitle"
+      type="text"
+      placeholder="Enter book or resource title">
+
+    <label for="resourceCategory">
+      Category
+    </label>
+
+    <select
+      id="resourceCategory"
+      onchange="categoryChanged()">
+
+      <option value="student">
+        Student Books
+      </option>
+
+      <option value="teacher">
+        Teacher Resources
+      </option>
+
+      <option value="health">
+        Health Resources
+      </option>
+
+      <option value="knowledge">
+        Knowledge
+      </option>
+
+      <option value="advice">
+        Advice
+      </option>
+
+    </select>
+
+    <div id="gradeBox">
+
+      <label for="resourceGrade">
+        Grade
+      </label>
+
+      <select id="resourceGrade">
+
+        <option value="">
+          Select Grade
+        </option>
+
+        <option value="1">Grade 1</option>
+        <option value="2">Grade 2</option>
+        <option value="3">Grade 3</option>
+        <option value="4">Grade 4</option>
+        <option value="5">Grade 5</option>
+        <option value="6">Grade 6</option>
+        <option value="7">Grade 7</option>
+        <option value="8">Grade 8</option>
+        <option value="9">Grade 9</option>
+        <option value="10">Grade 10</option>
+        <option value="11">Grade 11</option>
+        <option value="12">Grade 12</option>
+
+      </select>
+
+    </div>
+
+    <label for="resourceFile">
+      Select PDF File
+    </label>
+
+    <input
+      id="resourceFile"
+      type="file"
+      accept=".pdf,application/pdf">
+
+    <button
+      type="button"
+      class="action green"
+      onclick="uploadResource()">
+      Upload PDF
+    </button>
+
+    <button
+      type="button"
+      class="action red"
+      onclick="adminLogout()">
+      Logout
+    </button>
+
+    <p
+      id="uploadMessage"
+      class="message">
+    </p>
+
+    <hr style="margin:20px 0">
+
+    <h2>Manage Uploaded Resources</h2>
+
+    <div id="adminResourceList"></div>
+
+  </div>
+
+</section>
+
+
+<!-- PDF VIEWER -->
+
+<section id="viewer" class="section hidden">
+
+  <h2 id="viewerTitle">
+    PDF Viewer
+  </h2>
+
+  <button
+    type="button"
+    class="action"
+    onclick="closeViewer()">
+    Close Viewer
+  </button>
+
+  <div id="viewerContent"></div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+  <h3>NAOL ADULA INFORMATION HUB</h3>
+
+  <p>
+    Education • Knowledge • Health • Resources
+  </p>
+
+  <p>
+    © 2026 NAOL ADULA INFORMATION HUB.
+    All rights reserved.
+  </p>
+
+  <p>
+    Developed by Naol Adula
+  </p>
+
+</footer>
+
+
+<script>
+
+/* =========================================
+   DATABASE
+========================================= */
+
+const DB_NAME =
+  "NaolAdulaInformationHubDB";
+
+const DB_VERSION = 3;
+
+let db = null;
+
+let currentGrade = null;
+
+let adminLoggedIn = false;
+
+let currentObjectURL = null;
+
+
+/*
+   DEFAULT ADMIN PASSWORD
+
+   Current password:
+   Oromia@55
+
+   Recovery answer:
+   Abraham Lincoln
+*/
+
+let ADMIN_PASSWORD =
+  localStorage.getItem("naolAdminPassword") ||
+  "Oromia@55";
+
+
+const RECOVERY_ANSWER =
+  "abraham lincoln";
+
+
+/* =========================================
+   OPEN DATABASE
+========================================= */
+
+function openDatabase(){
+
+  return new Promise(function(resolve,reject){
+
+    const request =
+      indexedDB.open(
+        DB_NAME,
+        DB_VERSION
+      );
+
+    request.onupgradeneeded =
+      function(event){
+
+        const database =
+          event.target.result;
+
+        if(
+          !database.objectStoreNames.contains(
+            "resources"
+          )
+        ){
+
+          const store =
+            database.createObjectStore(
+              "resources",
+              {
+                keyPath:"id",
+                autoIncrement:true
+              }
+            );
+
+          store.createIndex(
+            "category",
+            "category",
+            {
+              unique:false
+            }
+          );
+
+          store.createIndex(
+            "grade",
+            "grade",
+            {
+              unique:false
+            }
+          );
+
+        }
+
+      };
+
+
+    request.onsuccess =
+      function(event){
+
+        db =
+          event.target.result;
+
+        db.onversionchange =
+          function(){
+
+            db.close();
+
+          };
+
+        resolve(db);
+
+      };
+
+
+    request.onerror =
+      function(){
+
+        reject(request.error);
+
+      };
+
+  });
+
+}
+
+
+/* =========================================
+   ADD RESOURCE
+========================================= */
+
+function addResource(resource){
+
+  return new Promise(
+    function(resolve,reject){
+
+      if(!db){
+
+        reject(
+          new Error(
+            "Database is not ready."
+          )
+        );
+
+        return;
+
+      }
+
+      const transaction =
+        db.transaction(
+          "resources",
+          "readwrite"
+        );
+
+      const store =
+        transaction.objectStore(
+          "resources"
+        );
+
+      const request =
+        store.add(resource);
+
+      request.onsuccess =
+        function(){
+
+          resolve(
+            request.result
+          );
+
+        };
+
+      request.onerror =
+        function(){
+
+          reject(
+            request.error
+          );
+
+        };
+
+    }
+  );
+
+}
+
+
+/* =========================================
+   GET ALL RESOURCES
+========================================= */
+
+function getAllResources(){
+
+  return new Promise(
+    function(resolve,reject){
+
+      if(!db){
+
+        reject(
+          new Error(
+            "Database is not ready."
+          )
+        );
+
+        return;
+
+      }
+
+      const transaction =
+        db.transaction(
+          "resources",
+          "readonly"
+        );
+
+      const store =
+        transaction.objectStore(
+          "resources"
+        );
+
+      const request =
+        store.getAll();
+
+      request.onsuccess =
+        function(){
+
+          resolve(
+            request.result || []
+          );
+
+        };
+
+      request.onerror =
+        function(){
+
+          reject(
+            request.error
+          );
+
+        };
+
+    }
+  );
+
+}
+
+
+/* =========================================
+   DELETE RESOURCE
+========================================= */
+
+function deleteResource(id){
+
+  return new Promise(
+    function(resolve,reject){
+
+      const transaction =
+        db.transaction(
+          "resources",
+          "readwrite"
+        );
+
+      const store =
+        transaction.objectStore(
+          "resources"
+        );
+
+      const request =
+        store.delete(
+          Number(id)
+        );
+
+      request.onsuccess =
+        function(){
+
+          resolve();
+
+        };
+
+      request.onerror =
+        function(){
+
+          reject(
+            request.error
+          );
+
+        };
+
+    }
+  );
+
+}
+
+
+/* =========================================
+   SHOW / HIDE PASSWORD
+========================================= */
+
+function togglePassword(
+  inputId,
+  buttonId
+){
+
+  const input =
+    document.getElementById(
+      inputId
+    );
+
+  const button =
+    document.getElementById(
+      buttonId
+    );
+
+  if(
+    input.type === "password"
+  ){
+
+    input.type = "text";
+
+    button.textContent =
+      "Hide";
+
+  }else{
+
+    input.type = "password";
+
+    button.textContent =
+      "Show";
+
+  }
+
+}
+
+
+/* =========================================
+   SHOW RECOVERY
+========================================= */
+
+function showRecovery(){
+
+  document
+    .getElementById(
+      "recoveryBox"
+    )
+    .classList.remove(
+      "hidden"
+    );
+
+  document
+    .getElementById(
+      "recoveryAnswer"
+    )
+    .focus();
+
+}
+
+
+/* =========================================
+   HIDE RECOVERY
+========================================= */
+
+function hideRecovery(){
+
+  document
+    .getElementById(
+      "recoveryBox"
+    )
+    .classList.add(
+      "hidden"
+    );
+
+  document
+    .getElementById(
+      "recoveryAnswer"
+    )
+    .value = "";
+
+  document
+    .getElementById(
+      "newPassword"
+    )
+    .value = "";
+
+  document
+    .getElementById(
+      "confirmPassword"
+    )
+    .value = "";
+
+  document
+    .getElementById(
+      "recoveryMessage"
+    )
+    .textContent = "";
+
+}
+
+
+/* =========================================
+   PASSWORD RECOVERY
+========================================= */
+
+function recoverPassword(){
+
+  const answer =
+    document
+      .getElementById(
+        "recoveryAnswer"
+      )
+      .value
+      .trim()
+      .toLowerCase();
+
+  const newPassword =
+    document
+      .getElementById(
+        "newPassword"
+      )
+      .value;
+
+  const confirmPassword =
+    document
+      .getElementById(
+        "confirmPassword"
+      )
+      .value;
+
+  const message =
+    document
+      .getElementById(
+        "recoveryMessage"
+      );
+
+
+  message.textContent = "";
+
+  message.style.color = "";
+
+
+  if(!answer){
+
+    message.textContent =
+      "Please enter your answer.";
+
+    message.style.color =
+      "red";
+
+    return;
+
+  }
+
+
+  if(answer !== RECOVERY_ANSWER){
+
+    message.textContent =
+      "Incorrect recovery answer.";
+
+    message.style.color =
+      "red";
+
+    return;
+
+  }
+
+
+  if(newPassword.length < 6){
+
+    message.textContent =
+      "New password must contain at least 6 characters.";
+
+    message.style.color =
+      "red";
+
+    return;
+
+  }
+
+
+  if(newPassword !== confirmPassword){
+
+    message.textContent =
+      "Passwords do not match.";
+
+    message.style.color =
+      "red";
+
+    return;
+
+  }
+
+
+  /*
+     Save the new password
+  */
+
+  ADMIN_PASSWORD =
+    newPassword;
+
+  localStorage.setItem(
+    "naolAdminPassword",
+    newPassword
+  );
+
+
+  message.textContent =
+    "Password reset successfully. You can now login with your new password.";
+
+  message.style.color =
+    "green";
+
+
+  setTimeout(
+    function(){
+
+      hideRecovery();
+
+    },
+    2000
+  );
+
+}
+
+
+/* =========================================
+   CATEGORY CHANGE
+========================================= */
+
+function categoryChanged(){
+
+  const category =
+    document.getElementById(
+      "resourceCategory"
+    ).value;
+
+  const gradeBox =
+    document.getElementById(
+      "gradeBox"
+    );
+
+
+  if(
+    category === "student"
+  ){
+
+    gradeBox
+      .classList
+      .remove(
+        "hidden"
+      );
+
+  }else{
+
+    gradeBox
+      .classList
+      .add(
+        "hidden"
+      );
+
+    document
+      .getElementById(
+        "resourceGrade"
+      )
+      .value = "";
+
+  }
+
+}
+
+
+/* =========================================
+   SHOW SECTION
+========================================= */
+
+function showSection(id){
+
+  document
+    .querySelectorAll(
+      "main > section"
+    )
+    .forEach(
+      function(section){
+
+        section
+          .classList
+          .add(
+            "hidden"
+          );
+
+      }
+    );
+
+
+  const target =
+    document.getElementById(id);
+
+
+  if(target){
+
+    target
+      .classList
+      .remove(
+        "hidden"
+      );
+
+  }
+
+
+  if(id === "students"){
+
+    renderGrades();
+
+  }
+
+
+  if(id === "teachers"){
+
+    renderCategory(
+      "teacher",
+      "teacherList"
+    );
+
+  }
+
+
+  if(id === "health"){
+
+    renderCategory(
+      "health",
+      "healthList"
+    );
+
+  }
+
+
+  if(id === "knowledge"){
+
+    renderCategory(
+      "knowledge",
+      "knowledgeList"
+    );
+
+  }
+
+
+  if(id === "advice"){
+
+    renderCategory(
+      "advice",
+      "adviceList"
+    );
+
+  }
+
+
+  if(
+    id === "admin" &&
+    adminLoggedIn
+  ){
+
+    renderAdminResources();
+
+  }
+
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
+}
+
+
+/* =========================================
+   RENDER GRADES
+========================================= */
+
+function renderGrades(){
+
+  const grid =
+    document.getElementById(
+      "gradeGrid"
+    );
+
+
+  if(!grid) return;
+
+
+  grid.innerHTML = "";
+
+
+  for(
+    let grade = 1;
+    grade <= 12;
+    grade++
+  ){
+
+    const card =
+      document.createElement(
+        "div"
+      );
+
+    card.className =
+      "card";
+
+
+    const title =
+      document.createElement(
+        "h3"
+      );
+
+    title.textContent =
+      "Grade " + grade;
+
+
+    const button =
+      document.createElement(
+        "button"
+      );
+
+    button.type =
+      "button";
+
+    button.className =
+      "action";
+
+    button.textContent =
+      "View Books";
+
+
+    button.onclick =
+      function(){
+
+        openGrade(
+          grade
+        );
+
+      };
+
+
+    card.appendChild(
+      title
+    );
+
+    card.appendChild(
+      button
+    );
+
+    grid.appendChild(
+      card
+    );
+
+  }
+
+}
+
+
+/* =========================================
+   OPEN GRADE
+========================================= */
+
+async function openGrade(
+  grade
+){
+
+  currentGrade =
+    String(grade);
+
+
+  const title =
+    document.getElementById(
+      "gradeTitle"
+    );
+
+
+  title.textContent =
+    "Grade " +
+    grade +
+    " Books";
+
+
+  document
+    .getElementById(
+      "gradeBooks"
+    )
+    .classList
+    .remove(
+      "hidden"
+    );
+
+
+  const all =
+    await getAllResources();
+
+
+  const books =
+    all.filter(
+      function(item){
+
+        return(
+          item.category ===
+            "student" &&
+          String(item.grade) ===
+            String(grade)
+        );
+
+      }
+    );
+
+
+  const list =
+    document.getElementById(
+      "gradeBookList"
+    );
+
+
+  list.innerHTML = "";
+
+
+  if(books.length === 0){
+
+    list.innerHTML =
+      '<div class="notice">' +
+      'No books available for Grade ' +
+      grade +
+      ' yet.' +
+      '</div>';
+
+    return;
+
+  }
+
+
+  books.forEach(
+    function(book){
+
+      list.appendChild(
+        createResourceCard(
+          book,
+          false
+        )
+      );
+
+    }
+  );
+
+}
+
+
+/* =========================================
+   RENDER CATEGORY
+========================================= */
+
+async function renderCategory(
+  category,
+  elementId
+){
+
+  const list =
+    document.getElementById(
+      elementId
+    );
+
+
+  if(!list) return;
+
+
+  list.innerHTML =
+    '<div class="loading">Loading resources...</div>';
+
+
+  try{
+
+    const all =
+      await getAllResources();
+
+
+    const resources =
+      all.filter(
+        function(item){
+
+          return(
+            item.category ===
+            category
+          );
+
+        }
+      );
+
+
+    list.innerHTML = "";
+
+
+    if(
+      resources.length === 0
+    ){
+
+      list.innerHTML =
+        '<div class="notice">' +
+        'No resources available yet. Please check back later.' +
+        '</div>';
+
+      return;
+
+    }
+
+
+    resources.forEach(
+      function(item){
+
+        list.appendChild(
+          createResourceCard(
+            item,
+            false
+          )
+        );
+
+      }
+    );
+
+
+  }catch(error){
+
+    console.error(error);
+
+
+    list.innerHTML =
+      '<div class="notice">' +
+      'Could not load resources.' +
+      '</div>';
+
+  }
+
+}
+
+
+/* =========================================
+   CREATE RESOURCE CARD
+========================================= */
+
+function createResourceCard(
+  item,
+  isAdmin
+){
+
+  const card =
+    document.createElement(
+      "div"
+    );
+
+  card.className =
+    "resource-item";
+
+
+  const title =
+    document.createElement(
+      "strong"
+    );
+
+  title.textContent =
+    item.title ||
+    "Untitled PDF";
+
+
+  card.appendChild(
+    title
+  );
+
+
+  const categoryNames = {
+
+    student:
+      "Student Books",
+
+    teacher:
+      "Teacher Resources",
+
+    health:
+      "Health Resources",
+
+    knowledge:
+      "Knowledge",
+
+    advice:
+      "Advice"
+
+  };
+
+
+  const info =
+    document.createElement(
+      "p"
+    );
+
+
+  info.textContent =
+    categoryNames[
+      item.category
+    ] ||
+    item.category ||
+    "";
+
+
+  if(
+    item.category ===
+      "student" &&
+    item.grade
+  ){
+
+    info.textContent +=
+      " — Grade " +
+      item.grade;
+
+  }
+
+
+  card.appendChild(
+    info
+  );
+
+
+  const actions =
+    document.createElement(
+      "div"
+    );
+
+  actions.className =
+    "resource-actions";
+
+
+  /* VIEW */
+
+  const viewBtn =
+    document.createElement(
+      "button"
+    );
+
+  viewBtn.type =
+    "button";
+
+  viewBtn.className =
+    "action";
+
+  viewBtn.textContent =
+    "View PDF";
+
+
+  viewBtn.onclick =
+    function(){
+
+      viewPDF(
+        item.id
+      );
+
+    };
+
+
+  actions.appendChild(
+    viewBtn
+  );
+
+
+  /* DOWNLOAD */
+
+  const downloadBtn =
+    document.createElement(
+      "button"
+    );
+
+  downloadBtn.type =
+    "button";
+
+  downloadBtn.className =
+    "action green";
+
+  downloadBtn.textContent =
+    "Download";
+
+
+  downloadBtn.onclick =
+    function(){
+
+      downloadPDF(
+        item.id
+      );
+
+    };
+
+
+  actions.appendChild(
+    downloadBtn
+  );
+
+
+  /* DELETE ONLY ADMIN */
+
+  if(isAdmin){
+
+    const deleteBtn =
+      document.createElement(
+        "button"
+      );
+
+    deleteBtn.type =
+      "button";
+
+    deleteBtn.className =
+      "action red";
+
+    deleteBtn.textContent =
+      "Delete";
+
+
+    deleteBtn.onclick =
+      function(){
+
+        removeResource(
+          item.id
+        );
+
+      };
+
+
+    actions.appendChild(
+      deleteBtn
+    );
+
+  }
+
+
+  card.appendChild(
+    actions
+  );
+
+
+  return card;
+
+}
+
+
+/* =========================================
+   ADMIN LOGIN
+========================================= */
+
+async function adminLogin(){
+
+  const password =
+    document
+      .getElementById(
+        "adminPassword"
+      )
+      .value;
+
+
+  const message =
+    document
+      .getElementById(
+        "loginMessage"
+      );
+
+
+  if(
+    password ===
+    ADMIN_PASSWORD
+  ){
+
+    adminLoggedIn =
+      true;
+
+
+    document
+      .getElementById(
+        "adminLogin"
+      )
+      .classList
+      .add(
+        "hidden"
+      );
+
+
+    document
+      .getElementById(
+        "adminPanel"
+      )
+      .classList
+      .remove(
+        "hidden"
+      );
+
+
+    message.textContent =
+      "";
+
+
+    categoryChanged();
+
+
+    await renderAdminResources();
+
+
+  }else{
+
+    message.textContent =
+      "Incorrect password. Please try again.";
+
+    message.style.color =
+      "red";
+
+  }
+
+}
+
+
+/* =========================================
+   LOGOUT
+========================================= */
+
+function adminLogout(){
+
+  adminLoggedIn =
+    false;
+
+
+  document
+    .getElementById(
+      "adminLogin"
+    )
+    .classList
+    .remove(
+      "hidden"
+    );
+
+
+  document
+    .getElementById(
+      "adminPanel"
+    )
+    .classList
+    .add(
+      "hidden"
+    );
+
+
+  document
+    .getElementById(
+      "adminPassword"
+    )
+    .value = "";
+
+
+  document
+    .getElementById(
+      "passwordToggle"
+    )
+    .textContent =
+    "Show";
+
+
+  document
+    .getElementById(
+      "adminPassword"
+    )
+    .type =
+    "password";
+
+}
+
+
+/* =========================================
+   UPLOAD RESOURCE
+========================================= */
+
+async function uploadResource(){
+
+  if(!adminLoggedIn){
+
+    alert(
+      "Please log in first."
+    );
+
+    return;
+
+  }
+
+
+  const title =
+    document
+      .getElementById(
+        "resourceTitle"
+      )
+      .value
+      .trim();
+
+
+  const category =
+    document
+      .getElementById(
+        "resourceCategory"
+      )
+      .value;
+
+
+  const grade =
+    document
+      .getElementById(
+        "resourceGrade"
+      )
+      .value;
+
+
+  const fileInput =
+    document
+      .getElementById(
+        "resourceFile"
+      );
+
+
+  const file =
+    fileInput.files[0];
+
+
+  const message =
+    document
+      .getElementById(
+        "uploadMessage"
+      );
+
+
+  message.textContent =
+    "";
+
+  message.style.color =
+    "";
+
+
+  if(!title){
+
+    message.textContent =
+      "Please enter a resource title.";
+
+    message.style.color =
+      "red";
+
+    return;
+
+  }
+
+
+  if(!file){
+
+    message.textContent =
+      "Please select a PDF file.";
+
+    message.style.color =
+      "red";
+
+    return;
+
+  }
+
+
+  const isPDF =
+    file.type ===
+      "application/pdf" ||
+    file.name
+      .toLowerCase()
+      .endsWith(".pdf");
+
+
+  if(!isPDF){
+
+    message.textContent =
+      "Please select a valid PDF file.";
+
+    message.style.color =
+      "red";
+
+    return;
+
+  }
+
+
+  if(
+    category === "student" &&
+    !grade
+  ){
+
+    message.textContent =
+      "Please select a grade for the student book.";
+
+    message.style.color =
+      "red";
+
+    return;
+
+  }
+
+
+  try{
+
+    const resource = {
+
+      title:title,
+
+      category:category,
+
+      grade:
+        category ===
+        "student"
+          ? String(grade)
+          : "",
+
+      fileName:
+        file.name,
+
+      file:file,
+
+      createdAt:
+        new Date()
+          .toISOString()
+
+    };
+
+
+    await addResource(
+      resource
+    );
+
+
+    message.textContent =
+      "PDF uploaded successfully!";
+
+    message.style.color =
+      "green";
+
+
+    document
+      .getElementById(
+        "resourceTitle"
+      )
+      .value = "";
+
+
+    document
+      .getElementById(
+        "resourceFile"
+      )
+      .value = "";
+
+
+    await renderAdminResources();
+
+
+  }catch(error){
+
+    console.error(
+      "UPLOAD ERROR:",
+      error
+    );
+
+
+    message.textContent =
+      "Upload failed. Browser storage may be full.";
+
+    message.style.color =
+      "red";
+
+  }
+
+}
+
+
+/* =========================================
+   ADMIN RESOURCES
+========================================= */
+
+async function renderAdminResources(){
+
+  if(!adminLoggedIn)
+    return;
+
+
+  const list =
+    document
+      .getElementById(
+        "adminResourceList"
+      );
+
+
+  list.innerHTML =
+    '<div class="loading">Loading resources...</div>';
+
+
+  try{
+
+    const all =
+      await getAllResources();
+
+
+    list.innerHTML =
+      "";
+
+
+    if(
+      all.length === 0
+    ){
+
+      list.innerHTML =
+        '<div class="notice">' +
+        'No resources uploaded yet.' +
+        '</div>';
+
+      return;
+
+    }
+
+
+    all.sort(
+      function(a,b){
+
+        return(
+          Number(b.id) -
+          Number(a.id)
+        );
+
+      }
+    );
+
+
+    all.forEach(
+      function(item){
+
+        list.appendChild(
+          createResourceCard(
+            item,
+            true
+          )
+        );
+
+      }
+    );
+
+
+  }catch(error){
+
+    console.error(
+      error
+    );
+
+
+    list.innerHTML =
+      '<div class="notice">' +
+      'Could not load resources.' +
+      '</div>';
+
+  }
+
+}
+
+
+/* =========================================
+   VIEW PDF
+========================================= */
+
+async function viewPDF(
+  id
+){
+
+  try{
+
+    const all =
+      await getAllResources();
+
+
+    const item =
+      all.find(
+        function(resource){
+
+          return(
+            Number(
+              resource.id
+            ) ===
+            Number(id)
+          );
+
+        }
+      );
+
+
+    if(
+      !item ||
+      !item.file
+    ){
+
+      alert(
+        "This PDF file is not available."
+      );
+
+      return;
+
+    }
+
+
+    if(currentObjectURL){
+
+      URL.revokeObjectURL(
+        currentObjectURL
+      );
+
+    }
+
+
+    currentObjectURL =
+      URL.createObjectURL(
+        item.file
+      );
+
+
+    document
+      .getElementById(
+        "viewerTitle"
+      )
+      .textContent =
+      item.title ||
+      "PDF Viewer";
+
+
+    const content =
+      document
+        .getElementById(
+          "viewerContent"
+        );
+
+
+    content.innerHTML =
+      "";
+
+
+    const iframe =
+      document.createElement(
+        "iframe"
+      );
+
+
+    iframe.id =
+      "pdfViewer";
+
+
+    iframe.src =
+      currentObjectURL +
+      "#toolbar=1&navpanes=0&scrollbar=1";
+
+
+    iframe.title =
+      item.title ||
+      "PDF Viewer";
+
+
+    iframe.setAttribute(
+      "loading",
+      "lazy"
+    );
+
+
+    content.appendChild(
+      iframe
+    );
+
+
+    const fallback =
+      document.createElement(
+        "div"
+      );
+
+
+    fallback.className =
+      "pdf-fallback";
+
+
+    fallback.innerHTML =
+      "<p>If the PDF does not appear above, use the button below.</p>";
+
+
+    const openButton =
+      document.createElement(
+        "button"
+      );
+
+
+    openButton.type =
+      "button";
+
+    openButton.className =
+      "action";
+
+    openButton.textContent =
+      "Open PDF in Browser";
+
+
+    openButton.onclick =
+      function(){
+
+        window.open(
+          currentObjectURL,
+          "_blank"
+        );
+
+      };
+
+
+    fallback.appendChild(
+      openButton
+    );
+
+
+    content.appendChild(
+      fallback
+    );
+
+
+    document
+      .querySelectorAll(
+        "main > section"
+      )
+      .forEach(
+        function(section){
+
+          section
+            .classList
+            .add(
+              "hidden"
+            );
+
+        }
+      );
+
+
+    document
+      .getElementById(
+        "viewer"
+      )
+      .classList
+      .remove(
+        "hidden"
+      );
+
+
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    });
+
+
+  }catch(error){
+
+    console.error(
+      "VIEW ERROR:",
+      error
+    );
+
+
+    alert(
+      "Could not open this PDF. Try Download instead."
+    );
+
+  }
+
+}
+
+
+/* =========================================
+   DOWNLOAD PDF
+========================================= */
+
+async function downloadPDF(
+  id
+){
+
+  try{
+
+    const all =
+      await getAllResources();
+
+
+    const item =
+      all.find(
+        function(resource){
+
+          return(
+            Number(
+              resource.id
+            ) ===
+            Number(id)
+          );
+
+        }
+      );
+
+
+    if(
+      !item ||
+      !item.file
+    ){
+
+      alert(
+        "This PDF file is not available."
+      );
+
+      return;
+
+    }
+
+
+    const url =
+      URL.createObjectURL(
+        item.file
+      );
+
+
+    const link =
+      document.createElement(
+        "a"
+      );
+
+
+    link.href =
+      url;
+
+
+    link.download =
+      item.fileName ||
+      (
+        item.title ||
+        "resource"
+      ) +
+      ".pdf";
+
+
+    document.body.appendChild(
+      link
+    );
+
+
+    link.click();
+
+
+    link.remove();
+
+
+    setTimeout(
+      function(){
+
+        URL.revokeObjectURL(
+          url
+        );
+
+      },
+      5000
+    );
+
+
+  }catch(error){
+
+    console.error(
+      error
+    );
+
+
+    alert(
+      "Could not download this PDF."
+    );
+
+  }
+
+}
+
+
+/* =========================================
+   DELETE RESOURCE
+========================================= */
+
+async function removeResource(
+  id
+){
+
+  if(!adminLoggedIn)
+    return;
+
+
+  const confirmed =
+    confirm(
+      "Are you sure you want to delete this resource?"
+    );
+
+
+  if(!confirmed)
+    return;
+
+
+  try{
+
+    await deleteResource(
+      id
+    );
+
+
+    await renderAdminResources();
+
+
+    if(currentGrade){
+
+      await openGrade(
+        currentGrade
+      );
+
+    }
+
+
+  }catch(error){
+
+    console.error(
+      error
+    );
+
+
+    alert(
+      "Could not delete this resource."
+    );
+
+  }
+
+}
+
+
+/* =========================================
+   CLOSE VIEWER
+========================================= */
+
+function closeViewer(){
+
+  if(currentObjectURL){
+
+    URL.revokeObjectURL(
+      currentObjectURL
+    );
+
+    currentObjectURL =
+      null;
+
+  }
+
+
+  document
+    .getElementById(
+      "viewerContent"
+    )
+    .innerHTML =
+    "";
+
+
+  showSection(
+    "home"
+  );
+
+}
+
+
+/* =========================================
+   INITIALIZE
+========================================= */
+
+async function initialize(){
+
+  try{
+
+    await openDatabase();
+
+
+    renderGrades();
+
+
+    categoryChanged();
+
+
+  }catch(error){
+
+    console.error(
+      "Database error:",
+      error
+    );
+
+
+    alert(
+      "Local storage could not be opened. Please use Chrome or another modern browser."
+    );
+
+  }
+
+}
+
+
+/* =========================================
+   START
+========================================= */
+
+document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    initialize();
+
+  }
+);
+
+</script>
+
+</body>
+</html>
